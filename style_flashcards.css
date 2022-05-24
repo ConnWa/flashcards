@@ -1,0 +1,80 @@
+body {
+    padding: 20px;
+    background-color: #eaecee;
+}
+
+h1{
+    color: #0b5345;
+    text-align: center;
+    font-family: 'Adamina', serif;
+    font-size: 70px;
+
+}
+
+.grid-container {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   border: 3px solid rgba(11, 83, 69, 0.8);
+   border-radius: 12px;
+   row-gap: 20px;
+   padding: 10px;
+   justify-items: center;
+    background-image: url("speech-ga177bac87_1280.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 850px;
+}/*grid-parent*/
+
+.card {
+    transition: 1s linear;
+    transform-style: preserve-3d;
+    position: relative;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.front {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid  #0b5345;
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 23px;
+    text-align: center;
+    font-family: 'Adamina', serif;
+    z-index: 3;
+    position: absolute;
+    backface-visibility: hidden;
+}/*grid-child*/
+
+.back {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(176, 209, 203, 0.8);
+    border: 2px solid  #0b5345;
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 23px;
+    text-align: center;
+    font-family: 'Adamina', serif;
+    position: relative;
+    z-index: 1;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+
+.front {
+    transition: background-color;
+}
+.front:hover {
+    background-color: rgba(176, 209, 203, 0.8);
+
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+
+}
